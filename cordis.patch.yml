@@ -1,0 +1,11 @@
+# dsh-think-zh-plus bundle layer: one Host-plane row.
+#
+# The row mounts the host half (system-prompt section). The browser half is
+# declared by `dsh.client` in package.json and loads with the Web UI.
+- insert:
+    - id: think-zh-plus
+      name: 'dsh-think-zh-plus'
+      config:
+        language: 简体中文
+        target: think
+        enabled: true

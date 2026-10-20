@@ -1,0 +1,55 @@
+{
+  "name": "dsh-think-zh-plus",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "DSH plugin: reason in Chinese (system-prompt section) + auto-expand every reasoning row in the Web UI",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "cordis-plugin",
+    "reasoning-language",
+    "chinese",
+    "think-row",
+    "ui"
+  ],
+  "license": "MIT",
+  "author": "wuaisaber",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wuaisaber/dsh-think-zh-plus.git"
+  },
+  "homepage": "https://github.com/wuaisaber/dsh-think-zh-plus#readme",
+  "bugs": {
+    "url": "https://github.com/wuaisaber/dsh-think-zh-plus/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test test/host.test.mjs test/client.test.mjs"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
