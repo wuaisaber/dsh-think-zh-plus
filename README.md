@@ -44,12 +44,12 @@ DSH 的 `standard`/`detailed` 模式会在 Turn 结束后折叠整段处理过�
 ### 本地开发安装
 
 ```powershell
-& 'G:\DSHDesk\resources\runtime\cli\bin\dsh.cmd' plugin --profile desktop add "file:G:/AIWORKSPACE/dsh-think-zh-plus"
+dsh plugin --profile desktop add "file:<你的路径>/dsh-think-zh-plus"
 ```
 
 ## 配置
 
-在 `G:\DSH\home\profiles\desktop\cordis.patch.yml` 里覆盖（用户 patch 层，升级不丢）：
+在 `<DSH_HOME>/profiles/desktop/cordis.patch.yml` 里覆盖（用户 patch 层，升级不丢）：
 
 ```yaml
 - id: think-zh-plus
@@ -71,7 +71,7 @@ DSH 的 `standard`/`detailed` 模式会在 Turn 结束后折叠整段处理过�
 ## 卸载
 
 ```powershell
-& 'G:\DSHDesk\resources\runtime\cli\bin\dsh.cmd' plugin --profile desktop remove dsh-think-zh-plus
+dsh plugin --profile desktop remove dsh-think-zh-plus
 ```
 
 ## 开发 / 测试
